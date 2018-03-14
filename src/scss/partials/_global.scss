@@ -1,0 +1,39 @@
+// global.scss                         styles/partials
+/////////////////////////////////////////////////////////////////////////
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+  outline: none;
+}
+
+html {
+  font-size: $base-font-size;
+  box-sizing: border-box;
+  background-color: $html-background-color;
+  -webkit-tap-highlight-color: rgba($black, 0);
+  -webkit-font-smoothing: antialiased;
+  -ms-overflow-style: none;
+}
+
+
+body {
+  font-family: $base-body-font-family;
+  color: $base-font-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $base-heading-font-family;
+}
+
+// Link styles
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: $link-transition;
+  &:hover {
+    color: darken($link-color, 10%);
+  }
+}

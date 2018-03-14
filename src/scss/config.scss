@@ -1,0 +1,38 @@
+// config.scss      ~/styles/
+// This file will be included in all components. Make sure this file
+// does not generate css. It should only include imports to
+// variables, functions, or mixins.
+/////////////////////////////////////////////////////////////////////
+
+// Imports //////////////////////////////////////////////////////////
+// Media Queries
+$small-range: (0, 37.5em); // 0, 640px
+$medium-range: (37.5625em, 64em); // 641px, 1024px
+$large-range: (64.063em, 90em); // 1025px, 1440px
+$xlarge-range: (90.063em, 120em); // 1441px, 1920px
+$xxlarge-range: (120.063em); // 1921px
+@import "./functions/_mqs";
+
+// Rem-calc Function
+@import "./functions/_rem-calc";
+
+// Colors
+@import "./config-colors";
+
+// Mixins
+@import "./mixins/all";
+
+/////////////////////////////////////////////////////////////////////
+// App Setup Variables
+/////////////////////////////////////////////////////////////////////
+
+// Base settings
+$base-font-size: 16px;
+$base-font-color: $mine;
+$base-body-font-family: 'Open Sans', sans-serif;
+$base-heading-font-family: 'Rokkitt', serif;
+$html-background-color: $bleu;
+
+// Global link styles
+$link-transition: all 150ms ease-in-out;
+$link-color: $bleu;

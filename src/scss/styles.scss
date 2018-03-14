@@ -1,0 +1,12 @@
+// styles.scss                         styles/
+// This is the main css file for the app. 
+/////////////////////////////////////////////////////////////////////////
+
+// Get the config. This is needed in every component scss file.
+@import "./config";
+
+// Normalize
+@import "./node_modules/normalize-scss/sass/normalize/import-now";
+
+// Get the app partials
+@import "./partials/all";
