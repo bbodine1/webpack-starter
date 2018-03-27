@@ -13,20 +13,18 @@ module.exports = {
     filename: 'js/index.js',
     path: path.resolve(__dirname, 'dist')
   },
-  plugins: [
-    new HtmlWebPackPlugin({
-      template: './src/index.html',
-      filename: './index.html'
-    }),
-    new ExtractTextPlugin({
-      filename: './scss/styles.css'
-    })
-  ],
   module: {
     rules: [
       {
         test: /\.html$/,
-        use: [{ loader: 'html-loader', options: { minimize: true } }]
+        use: [
+          {
+            loader: 'html-loader',
+            options: {
+              minimize: true
+            }
+          }
+        ]
       },
       {
         test: /\.(svg|gif|png|jpe?g)/i,
