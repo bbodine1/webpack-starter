@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -10,7 +11,7 @@ module.exports = {
     ]
   },
   output: {
-    filename: 'js/index.js',
+    filename: 'js/[name].js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
@@ -33,7 +34,7 @@ module.exports = {
             loader: 'url-loader',
             options: {
               name: './img/[name].[ext]',
-              limit: 10000
+              limit: 10 * 1024
             }
           },
           {
@@ -84,10 +85,16 @@ module.exports = {
     ]
   },
   plugins: [
+    new CopyWebpackPlugin([{ from: 'src/assets', to: '' }]),
     new HtmlWebPackPlugin({
       template: './src/index.html',
       favicon: './src/favicon.ico',
       filename: './index.html'
+    }),
+    new HtmlWebPackPlugin({
+      template: './src/404.html',
+      favicon: './src/favicon.ico',
+      filename: './404.html'
     }),
     new ExtractTextPlugin({
       filename: './styles.css'

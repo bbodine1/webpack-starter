@@ -1,6 +1,7 @@
 // all.scss                         styles/partials
 /////////////////////////////////////////////////////////////////////////
 
+@import "./typography";
 
 // Last imported files are global and shame
 @import "./global"; // This include should be next to last

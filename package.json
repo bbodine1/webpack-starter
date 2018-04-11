@@ -5,6 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "build": "webpack --config webpack.prod.js",
+    "build:dev": "webpack --config webpack.dev.js",
     "start": "webpack-dev-server --open --config webpack.dev.js --port 3000",
     "clean": "rm -rf ./dist"
   },
@@ -20,6 +21,7 @@
     "babel-preset-env": "^1.6.1",
     "clean-webpack-plugin": "^0.1.19",
     "compression-webpack-plugin": "^1.1.11",
+    "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^0.28.10",
     "extract-text-webpack-plugin": "^4.0.0-alpha.0",
     "file-loader": "^1.1.11",

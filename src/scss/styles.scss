@@ -6,7 +6,7 @@
 @import "./config";
 
 // Normalize
-@import "./node_modules/normalize-scss/sass/normalize/import-now";
+@import "~normalize-scss/sass/normalize/import-now";
 
 // Get the app partials
 @import "./partials/all";
